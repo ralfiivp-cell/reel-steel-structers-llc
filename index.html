@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel Steel Constructions LLC | Metal Carports, Steel Buildings &amp; Shops</title>
+  <meta name="description" content="Reel Steel Constructions LLC builds metal carports, steel buildings, shops, garages and sheds in the Pacific Northwest. Browse styles and get a rough quote estimate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <!--
+        LOGO: To swap in the real logo, replace the <span class="logo-text"> block below with:
+        <img src="images/logo.png" alt="Reel Steel Constructions LLC" class="logo-img" />
+        (This is the only place the logo is referenced; the footer uses the text name.)
+      -->
+      <a href="#top" class="logo" aria-label="Reel Steel Constructions LLC home">
+        <span class="logo-text"><span class="logo-mark">RS</span><span class="logo-words"><strong>REEL STEEL</strong><small>CONSTRUCTIONS LLC</small></span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#styles">Styles</a>
+        <a href="#gallery">Projects</a>
+        <a href="#quote">Estimate</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#quote" class="btn btn-accent btn-sm">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-bg" style="background-image:url('images/hero-truss-frame.jpg')" role="img" aria-label="Galvanized steel truss frame under construction in a pine forest"></div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Metal Carports &bull; Steel Buildings &bull; Shops &bull; Garages &bull; Sheds</p>
+        <h1>Built from steel.<br /><span>Built to last.</span></h1>
+        <p class="hero-sub">Reel Steel Constructions LLC designs and builds custom metal structures for homes, farms, and businesses across the Pacific Northwest. Explore styles, see our work, and get a rough estimate in minutes.</p>
+        <div class="hero-ctas">
+          <a href="#quote" class="btn btn-accent">Get a Quote</a>
+          <a href="#styles" class="btn btn-ghost">Browse Styles</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STYLES ===================== -->
+    <section class="section" id="styles">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow dark">Ideas &amp; Styles</p>
+          <h2>Find the right structure for your property</h2>
+          <p>Every build is customized to your site and needs. Here are the most common styles to get you started. Sizes shown are typical ranges, not limits.</p>
+        </div>
+        <div class="style-grid" id="style-grid"><!-- cards rendered by script.js from STYLES --></div>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="section section-dark" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Project Gallery</p>
+          <h2>Recent work</h2>
+          <p>A few of the structures we have built. Tap any photo to view it larger.</p>
+        </div>
+        <div class="gallery">
+          <figure class="g-item g-wide" data-index="0">
+            <img src="images/hero-truss-frame.jpg" alt="Wide-span galvanized steel truss frame under construction in a pine forest" loading="lazy" />
+            <figcaption>Wide-span steel truss frame</figcaption>
+          </figure>
+          <figure class="g-item g-tall" data-index="1">
+            <img src="images/barn-shed-klamath-falls.jpg" alt="Brown barn-style gambrel shed with windows in Klamath Falls, Oregon" loading="lazy" />
+            <figcaption>Barn-style shed &mdash; Klamath Falls, OR</figcaption>
+          </figure>
+          <figure class="g-item" data-index="2">
+            <img src="images/shop-rollup-doors.jpg" alt="White steel shop with three brown roll-up doors and brown trim" loading="lazy" />
+            <figcaption>Steel shop with 3 roll-up doors</figcaption>
+          </figure>
+          <figure class="g-item" data-index="3">
+            <img src="images/white-building-gable.jpg" alt="Large white steel building with brown trim, gable end and walk-in door" loading="lazy" />
+            <figcaption>Large steel building, brown trim</figcaption>
+          </figure>
+          <figure class="g-item g-tall" data-index="4">
+            <img src="images/charcoal-commercial.jpg" alt="Dark charcoal commercial steel building with windows" loading="lazy" />
+            <figcaption>Charcoal commercial building</figcaption>
+          </figure>
+          <figure class="g-item g-tall" data-index="5">
+            <img src="images/gray-garage.jpg" alt="Gray steel garage with horizontal panels, white walk-in door and window" loading="lazy" />
+            <figcaption>Enclosed steel garage</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUOTE CALCULATOR ===================== -->
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow dark">Rough Estimate</p>
+          <h2>Build your structure, see a ballpark price</h2>
+          <p>Adjust the options below and the estimate updates instantly.</p>
+        </div>
+
+        <div class="calc">
+          <form class="calc-form" id="calc-form" onsubmit="return false;">
+            <div class="field full">
+              <label for="c-style">Style / roof type</label>
+              <select id="c-style" name="style"></select>
+            </div>
+            <div class="field">
+              <label for="c-width">Width <output id="o-width"></output></label>
+              <input type="range" id="c-width" name="width" min="12" max="60" step="2" value="20" />
+            </div>
+            <div class="field">
+              <label for="c-length">Length <output id="o-length"></output></label>
+              <input type="range" id="c-length" name="length" min="20" max="100" step="1" value="25" />
+            </div>
+            <div class="field">
+              <label for="c-height">Leg height <output id="o-height"></output></label>
+              <input type="range" id="c-height" name="height" min="6" max="16" step="1" value="8" />
+            </div>
+            <div class="field">
+              <label for="c-gauge">Frame gauge</label>
+              <select id="c-gauge" name="gauge">
+                <option value="14">14-gauge (standard)</option>
+                <option value="12">12-gauge (heavy duty)</option>
+              </select>
+            </div>
+            <div class="field full">
+              <span class="label">Enclosure</span>
+              <div class="seg" role="radiogroup" aria-label="Enclosure">
+                <label><input type="radio" name="enclosure" value="open" checked /><span>Open</span></label>
+                <label><input type="radio" name="enclosure" value="oneSide" /><span>One side</span></label>
+                <label><input type="radio" name="enclosure" value="bothSides" /><span>Both sides</span></label>
+                <label><input type="radio" name="enclosure" value="full" /><span>Fully enclosed</span></label>
+              </div>
+            </div>
+            <div class="field">
+              <label for="c-rollup">Roll-up doors</label>
+              <input type="number" id="c-rollup" name="rollup" min="0" max="10" value="0" inputmode="numeric" />
+            </div>
+            <div class="field">
+              <label for="c-walk">Walk-in doors</label>
+              <input type="number" id="c-walk" name="walk" min="0" max="10" value="0" inputmode="numeric" />
+            </div>
+            <div class="field">
+              <label for="c-windows">Windows</label>
+              <input type="number" id="c-windows" name="windows" min="0" max="20" value="0" inputmode="numeric" />
+            </div>
+            <div class="field">
+              <label for="c-anchor">Anchoring / foundation</label>
+              <select id="c-anchor" name="anchor">
+                <option value="ground">Ground (rebar anchors)</option>
+                <option value="asphalt">Asphalt anchors</option>
+                <option value="concrete">Concrete anchors (existing slab)</option>
+              </select>
+            </div>
+            <p class="calc-hint full" id="calc-hint" hidden></p>
+          </form>
+
+          <aside class="calc-result" aria-live="polite">
+            <p class="result-label">Estimated range</p>
+            <p class="result-price" id="r-price">$0 &ndash; $0</p>
+            <p class="result-size" id="r-size"></p>
+            <ul class="result-breakdown" id="r-breakdown"></ul>
+            <p class="disclaimer"><strong>Estimates are rough and for planning only; final quote after site visit.</strong> Prices vary with site prep, permits, snow/wind load requirements, delivery distance, and current steel costs. Concrete slab not included.</p>
+            <a href="#contact" class="btn btn-accent btn-block" id="send-estimate">Request an Exact Quote</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section section-steel" id="about">
+      <div class="container about">
+        <div class="about-img">
+          <img src="images/shop-rollup-doors.jpg" alt="White steel shop with brown roll-up doors" loading="lazy" />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow dark">About Us</p>
+          <h2>Why Reel Steel</h2>
+          <p>Reel Steel Constructions LLC builds metal carports, steel buildings, shops, garages and sheds for customers in the Pacific Northwest, including Klamath Falls, Oregon. We work with you from the first idea to the final bolt.</p>
+          <ul class="why-list">
+            <li><strong>Custom to your site.</strong> Sizes, heights, doors, windows and colors chosen around how you will actually use the space.</li>
+            <li><strong>Built for Northwest weather.</strong> Options like vertical roofing and heavier 12-gauge framing to help handle snow and rain.</li>
+            <li><strong>Straightforward quotes.</strong> We visit the site, talk through options, and give you a clear written quote before work starts.</li>
+            <li><strong>One crew, start to finish.</strong> Framing, sheeting, trim and doors installed by the same team.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-dark" id="contact">
+      <div class="container contact">
+        <div class="contact-info">
+          <p class="eyebrow">Contact</p>
+          <h2>Let's talk about your build</h2>
+          <p>Tell us what you have in mind and we will get back to you to schedule a site visit and exact quote.</p>
+          <!-- PLACEHOLDER contact details: replace with the real phone/email/service area -->
+          <ul class="contact-list">
+            <li><span>Phone</span><a href="tel:5550000000">(555) 000-0000</a> <em class="ph">placeholder</em></li>
+            <li><span>Email</span><a href="mailto:info@example.com">info@example.com</a> <em class="ph">placeholder</em></li>
+            <li><span>Service area</span>Klamath Falls, OR &amp; the Pacific Northwest</li>
+          </ul>
+        </div>
+        <!-- Front-end only form: no backend is connected yet. Hook up Formspree/Netlify Forms/etc. later. -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name" /></div>
+          <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" /></div>
+          <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email" /></div>
+          <div class="field full"><label for="f-location">Project location (city)</label><input id="f-location" name="location" /></div>
+          <div class="field full"><label for="f-msg">Project details</label><textarea id="f-msg" name="message" rows="5" placeholder="Style, size, doors, timeline..."></textarea></div>
+          <button type="submit" class="btn btn-accent full">Send Request</button>
+          <p class="form-status full" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-name">REEL STEEL CONSTRUCTIONS LLC</p>
+        <p>Metal carports, steel buildings, shops, garages &amp; sheds.<br />Pacific Northwest &bull; Klamath Falls, Oregon</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#styles">Styles</a><a href="#gallery">Projects</a><a href="#quote">Estimate</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Reel Steel Constructions LLC. All rights reserved.</p>
+      <p>Online estimates are rough and for planning only.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden aria-modal="true" role="dialog" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+    <figure><img id="lb-img" src="" alt="" /><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lb-next" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
